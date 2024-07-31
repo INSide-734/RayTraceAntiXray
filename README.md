@@ -1,11 +1,11 @@
 # RayTraceAntiXray
 Paper plugin for server-side async multithreaded ray tracing to hide ores that are exposed to air using Paper Anti-Xray engine-mode 1.
 
-Paper Anti-Xray can't hide ores that are exposed to air in caves for example (see picture below). This plugin is an add-on for Paper Anti-Xray to hide those ores too, using ray tracing to calculate whether or not those ores are visible to players.
+Paper Anti-Xray can't hide ores that are exposed to air in caves for example (see picture below). This plugin is an add-on for Paper Anti-Xray to hide those ores too, using ray tracing to calculate whether or not those ores are visible to players. This plugin can also fully hide block entities such as chests since Minecraft 1.20.6.
 
 ![RayTraceAntiXray](https://user-images.githubusercontent.com/18699205/185815590-4b2efce6-5a26-4579-b079-e9958a454fd0.gif)
 ## How to install
-* Download and install [Paper](https://papermc.io/downloads/paper) 1.20.6. Folia is supported since Minecraft 1.20.1.
+* Download and install [Paper](https://papermc.io/downloads/paper) 1.21. Folia is supported since Minecraft 1.20.1.
 * Enable [Paper Anti-Xray](https://docs.papermc.io/paper/anti-xray) using `engine-mode: 1`.
 * Download and install [ProtocolLib](https://www.spigotmc.org/resources/protocollib.1997/).
 * Download and install [RayTraceAntiXray](https://builtbybit.com/resources/raytraceantixray.24914/). (For older Minecraft versions, browse the update history.)
@@ -14,7 +14,6 @@ Paper Anti-Xray can't hide ores that are exposed to air in caves for example (se
 * Note that you should restart your server after each of these steps. Don't enable, disable or reload this plugin on a running server under any circumstances (e.g. using `/reload`, plugin managers, etc.). It won't work properly and will cause issues.
 ## Known issues
 * Depending on the number of players and config settings, this plugin can be resource intensive. I only recommend using it if you have "unused" CPU threads available on your server in order to minimize the impact on the main thread.
-* In principle, the plugin can also hide tile entities. However, even though the blocks themselves are being hidden, the tile entity packets are still being sent, which means that more clever hack clients could bypass this. (Could be fixed in a future release by not sending the tile entity packets until the block is visible.)
 * The culling algorithm is intentionally not 100% accurate for performance and functional reasons. When in doubt, it is assumed that a block is visible. Thus hidden blocks tend to be revealed rather earlier than late, provided that the server isn't overloaded and doesn't lag. Usually, however, this cannot be abused.
 * There is currently no way to reload this plugin.
 ## Demo
