@@ -7,8 +7,8 @@
   <name>Libs</name>
   <description>Libs.</description>
   <properties>
-    <minecraftVersion>26.2</minecraftVersion>
-    <paperVersion>${minecraftVersion}.build.65-beta</paperVersion>
+    <minecraftVersion>26.3</minecraftVersion>
+    <paperVersion>${minecraftVersion}.build.26-alpha</paperVersion>
   </properties>
   <repositories>
     <repository>
@@ -47,7 +47,7 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
-        <version>3.6.3</version>
+        <version>3.6.4</version>
         <executions>
           <execution>
             <id>exec</id>
@@ -69,7 +69,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-install-plugin</artifactId>
-        <version>3.1.4</version>
+        <version>3.2.0</version>
         <executions>
           <execution>
             <id>install-file</id>
